@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".MainActivity">
+
+    <!-- app title text -->
+    <TextView
+        android:id="@+id/apptitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/calchue"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <!-- CUSTOMIZE header text -->
+    <TextView
+        android:id="@+id/customtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/customize"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.325" />
+
+    <!-- PALETTE header text -->
+    <TextView
+        android:id="@+id/palettetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/palette"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apptitle"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <!-- information button -->
+    <android.widget.Button
+        android:id="@+id/info_btn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/info_buttonshape"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="0sp"
+        android:text="@string/i"
+        android:textAlignment="center"
+        android:textColor="@color/dark_grey"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/palettetext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apptitle"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!-- text to show 3rd palette color hex code -->
+    <TextView
+        android:id="@+id/right_hexcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:background="@drawable/show_hexcode"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"
+        android:text="#FFFFFF"
+        android:textColor="@color/white"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/right_colorpalette"
+        app:layout_constraintStart_toStartOf="@+id/right_colorpalette"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- text to show 2nd palette color hex code -->
+    <TextView
+        android:id="@+id/left_hexcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:background="@drawable/show_hexcode"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"
+        android:text="#FFFFFF"
+        android:textColor="@color/white"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/left_colorpalette"
+        app:layout_constraintStart_toStartOf="@+id/left_colorpalette"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="75dp" />
+
+    <!-- text to show 1st palette color hex code -->
+    <TextView
+        android:id="@+id/center_hexcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="196dp"
+        android:background="@drawable/show_hexcode"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"
+        android:text="#FFFFFF"
+        android:textColor="@color/white"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/center_colorpalette"
+        app:layout_constraintStart_toStartOf="@+id/center_colorpalette"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- view to show 3d palette color -->
+    <ImageView
+        android:id="@+id/right_colorpalette"
+        android:layout_width="99dp"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/right_colorpalettebg"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.795"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.173" />
+
+    <!-- view to show 2nd palette color -->
+    <ImageView
+        android:id="@+id/left_colorpalette"
+        android:layout_width="99dp"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/left_colorpalettebg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.173" />
+
+    <!-- view to show 1st palette color -->
+    <ImageView
+        android:id="@+id/center_colorpalette"
+        android:layout_width="90dp"
+        android:layout_height="52dp"
+        android:background="@drawable/center_colorpalettebg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.173" />
+
+    <!-- adding ColorPickerView by duanhong169 in github -->
+    <top.defaults.colorpicker.ColorPickerView
+        android:id="@+id/color_picker"
+        android:layout_width="278dp"
+        android:layout_height="308dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.828" />
+
+    <!-- get color scheme button -->
+    <ImageButton
+        android:id="@+id/get_color_btn"
+        android:layout_width="198dp"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.962"
+        app:srcCompat="@drawable/get_color" />
+
+    <!-- number 1 text to guide user -->
+    <TextView
+        android:id="@+id/num_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:text="@string/_1"
+        android:textColor="@color/dark_grey"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/analogous_btn"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <!-- split complementary button -->
+    <ImageButton
+        android:id="@+id/splitcomp_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/split_complementary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.395"
+        app:srcCompat="@drawable/split_complementary" />
+
+    <!-- triadic button -->
+    <ImageButton
+        android:id="@+id/triadic_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/triadic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.395"
+        app:srcCompat="@drawable/triadic" />
+
+    <!-- analogous button -->
+    <ImageButton
+        android:id="@+id/analogous_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/analogous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.337"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.395"
+        app:srcCompat="@drawable/analogous" />
+
+    <!-- number 2 text to guide user -->
+    <TextView
+        android:id="@+id/num_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2"
+        android:textColor="@color/dark_grey"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.474" />
+
+    <!-- to take input from user, enter hex code -->
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="157dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="28dp"
+        android:autofillHints=""
+        android:background="@drawable/enter_text"
+        android:digits="0123456789ABCDEFabcdef"
+        android:hint="@string/enter_hex_color_code"
+        android:inputType="text"
+        android:paddingStart="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/light_grey"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/num_two"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/color_display"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- app icon -->
+    <ImageView
+        android:id="@+id/sidelogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/calchue_icon" />
+
+    <!-- display color from color wheel  -->
+    <View
+        android:id="@+id/color_display"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="80dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<resources>
+    <!-- In Main Activity -->
+    <string name="calchue">CalcHue</string>
+    <string name="i">i</string>
+    <string name="palette">Palette</string>
+    <string name="customize">Customize</string>
+    <string name="_1">1.</string>
+    <string name="_2">2.</string>
+    <string name="enter_hex_color_code">Enter Hex Color Code</string>
+    <string name="split_complementary">Split Complementary</string>
+    <string name="triadic">Triadic</string>
+    <string name="analogous">Analogous</string>
+
+    <!-- In Popup -->
+    <string name="app_desc">The app will calculate using mathematical formulas based on the selected harmony type.</string>
+    <string name="first_inst">1. Pick a harmony from the three choices:</string>
+    <string name="second_inst">2. Choose a color by entering its hex code or searching through the color wheel.</string>
+    <string name="third_inst">3. Get color scheme and enjoy your palette of three!</string>
+    <string name="my_name">Pauline Villahermosa | BSc CC Year 2</string>
+    <string name="close">Close</string>
+</resources>

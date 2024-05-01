@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/popupmain"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#414141"
+        android:paddingHorizontal="40dp"
+        android:paddingVertical="40dp"
+        tools:context=".PopupActivity">
+
+        <!-- app information description -->
+        <TextView
+            android:id="@+id/appinfo"
+            android:layout_width="190dp"
+            android:layout_height="55dp"
+            android:text="@string/app_desc"
+            android:textAlignment="center"
+            android:textColor="@color/light_grey"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.014" />
+
+        <!-- first instruction text -->
+        <TextView
+            android:id="@+id/instruction_1"
+            android:layout_width="206dp"
+            android:layout_height="45dp"
+            android:text="@string/first_inst"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.362" />
+
+        <!-- first instruction text: LIST OF HARMONIES -->
+        <TextView
+            android:id="@+id/instruction_choices"
+            android:layout_width="205dp"
+            android:layout_height="46dp"
+            android:text="• analogous                   • triad                             • split complementary"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.362"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- second instruction text -->
+        <TextView
+            android:id="@+id/instruction_2"
+            android:layout_width="209dp"
+            android:layout_height="64dp"
+            android:text="@string/second_inst"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.684" />
+
+        <!-- third instruction text -->
+        <TextView
+            android:id="@+id/instruction_3"
+            android:layout_width="206dp"
+            android:layout_height="45dp"
+            android:text="@string/third_inst"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.844" />
+
+        <!-- student name and year text -->
+        <TextView
+            android:id="@+id/student_name"
+            android:layout_width="223dp"
+            android:layout_height="19dp"
+            android:text="@string/my_name"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.922" />
+
+        <!-- close text as button to exit popup -->
+        <TextView
+            android:id="@+id/close_popup"
+            android:layout_width="54dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="384dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/close"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- app title text -->
+        <TextView
+            android:id="@+id/calchue_popup"
+            android:layout_width="93dp"
+            android:layout_height="34dp"
+            android:text="@string/calchue"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.222" />
+
+        <!-- app icon -->
+        <ImageView
+            android:id="@+id/calchueicon_popup"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.751"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.223"
+            app:srcCompat="@drawable/calchue_icon_trans" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
